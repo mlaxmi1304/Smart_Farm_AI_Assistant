@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card text-center shadow-sm p-4 bg-light">
+        <h4 class="mb-3 text-success">🌿 Recommendation Result</h4>
+        <p class="lead">
+          Based on the values you provided, the most suitable crop to grow is:
+        </p>
+        <h2 class="text-primary"><b>{{ prediction }}</b></h2>
+        <a href="{{ url_for('crop') }}" class="btn btn-outline-success mt-4">
+          🔁 Try Again
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

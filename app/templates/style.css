@@ -1,0 +1,32 @@
+/* static/style.css */
+
+/* General body styling */
+body {
+  background-color: #eef5db;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Centered container styles */
+.container-box {
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 60px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom button */
+.btn-custom {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Centered title */
+.title-heading {
+  text-align: center;
+  margin-top: 40px;
+  color: #333333;
+}

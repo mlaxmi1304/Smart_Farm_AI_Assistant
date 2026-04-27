@@ -1,0 +1,14 @@
+How to setup a virtual environment?
+Create a virtual environment: plant_ai
+Install all requirements.txt
+
+How to run this project?
+
+cd Smart_Farm_AI_Langchain
+cd app
+dir
+conda info-- envs
+conda activate plant_ai
+python app.py
+-------------------
+

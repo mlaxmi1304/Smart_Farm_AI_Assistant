@@ -1,0 +1,25 @@
+<!-- templates/index.html -->
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container mt-5">
+  <div class="text-center">
+    <h2 class="mb-4 text-success"><b>Welcome to Smart Agri Advisor</b></h2>
+    <p class="lead mb-5">Choose one of the services below to get started:</p>
+
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="{{ url_for('crop') }}" class="btn btn-custom btn-lg m-2">
+        🌾 Crop Recommendation
+      </a>
+
+      <a href="{{ url_for('plant') }}" class="btn btn-custom btn-lg m-2">
+        🌿 Plant Disease Detection
+      </a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+{% endblock %}

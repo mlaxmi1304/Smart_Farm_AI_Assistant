@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Agri Advisor</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+  
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <a class="navbar-brand" href="{{ url_for('home') }}">Smart Agri Advisor</a> <!--Earlier: home nistead of cropa-->
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('crop') }}">Crop Recommendation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('plant') }}">Plant Disease Detection</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <div class="content">
+    
+    {% block body %}{% endblock %}
+  </div>
+
+  
+  <footer class="footer bg-light text-center text-muted py-3">
+    <small>&copy; 2025 Smart Agri Advisor | All Rights Reserved</small>
+  </footer>
+
+</body>
+</html>

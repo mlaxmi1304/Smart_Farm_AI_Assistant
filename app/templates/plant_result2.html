@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container my-5">
+  <div class="p-4 bg-light rounded shadow-sm">
+
+    <h3 class="text-success text-center mb-4">🌿 Diagnosis Complete</h3>
+
+    <!-- Disease Result -->
+    <div class="mb-3">
+      <h5 class="text-dark">
+        <strong>Result:</strong> 
+        <span class="text-danger">{{ prediction }}</span>
+      </h5>
+    </div>
+
+    <!-- AI Advice Section -->
+    <div class="mt-4">
+      <h5 class="text-primary mb-3">🧠 AI Plant Doctor Advice</h5>
+
+      <div class="bg-white p-3 rounded border">
+        <!-- <pre class="mb-0" style="white-space: pre-wrap; font-family: inherit;"> -->
+{{ advice | safe}}
+        <!-- </pre> -->
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="text-center">
+      <a href="{{ url_for('plant') }}" class="btn btn-outline-primary mt-4">
+        🔁 Check Another Image
+      </a>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

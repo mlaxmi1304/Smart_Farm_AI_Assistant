@@ -1,0 +1,30 @@
+<!-- templates/Plant.html -->
+{% extends 'layout.html' %}
+{% block body %}
+
+<link rel="stylesheet" href="Sam_plant_css.css">
+
+<div class="upload-container">
+    <h2>Plant Disease Detection</h2>
+    <p>Upload a clear image of the affected leaf to get a disease prediction.</p>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" onchange="preview_image(event)" required>
+        <div class="image-preview">
+            <img id="output-image" alt="Image Preview" />
+        </div>
+        <button type="submit">Predict Disease</button>
+    </form>
+</div>
+
+<script>
+    function preview_image(event) {
+        const reader = new FileReader();
+        reader.onload = () => {
+            document.getElementById('output-image').src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container my-5">
+  <h3 class="text-center text-success mb-4">
+    🌾 Find the Best Crop for Your Field
+  </h3>
+<!--url_for_('crop_prediction')-->
+  <form method="POST" action="{{ url_for('crop_result') }}" class="p-4 rounded shadow-sm bg-light mx-auto" style="max-width: 500px;">
+    
+    <div class="form-group mb-3">
+      <label for="nitrogen"><b>Nitrogen (N)</b></label>
+      <input type="number" class="form-control" id="nitrogen" name="nitrogen" placeholder="e.g. 50" required>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="phosphorous"><b>Phosphorous (P)</b></label>
+      <input type="number" class="form-control" id="phosphorous" name="phosphorous" placeholder="e.g. 40" required>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="pottasium"><b>Potassium (K)</b></label>
+      <input type="number" class="form-control" id="pottasium" name="pottasium" placeholder="e.g. 35" required>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="ph"><b>Soil pH Level</b></label>
+      <input type="number" step="0.01" class="form-control" id="ph" name="ph" placeholder="e.g. 6.5" required>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="rainfall"><b>Rainfall (mm)</b></label>
+      <input type="number" step="0.01" class="form-control" id="rainfall" name="rainfall" placeholder="e.g. 200" required>
+    </div>
+    
+    <div class="form-group mb-4">
+      <label for="city"><b>Enter Your City</b></label>
+      <input type="text" class="form-control" id="city" name="city" placeholder="e.g. Bhopal" required>
+    </div>
+  
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-success px-4 py-2">
+        Predict Crop
+      </button>
+    </div>
+
+  </form>
+</div>
+
+{% endblock %}
